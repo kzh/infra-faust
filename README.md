@@ -1,4 +1,4 @@
-# infra-faust
+# infra
 This repository contains configuration and tooling for my personal cloud infrastructure.
 At the moment, this primarily consist of a two node kubernetes cluster running on bare metal
 dedicated machines hosted at a Hetzner datacenter. The nodes are connected on a private
@@ -8,10 +8,10 @@ virtual L2 network.
 **Components:**
 * **IaC:** Pulumi
 * **Package Manager:** Helm
-* **Networking:** Calico, MetalLB, Istio
+* **Networking:** Cilium, MetalLB, Istio
 * **Storage:** Rook Ceph
 * **Monitoring:** Prometheus, Grafana, Jaeger, OpenTelemetry Collector, Fluent Bit, Elasticsearch, Kibana
-* **Database:** CockroachDB
+* **Database:** CockroachDB, ClickHouse, Redis
 * **PKI:** OnePassword, Vault, cert-manager
 
 Tailscale is used to remotely `kubectl` into the cluster. Administrative internal services are exposed behind mTLS.
